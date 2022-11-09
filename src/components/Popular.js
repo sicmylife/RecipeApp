@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import {Link} from 'react-router-dom';
+import './veggie.css'
 
 function Popular() {
   const [popular, setPopular] = useState([]);
@@ -27,7 +28,7 @@ if (check){
 
   return (
     <div>
-      <Wrapper>
+      <div className="wrap">
         <h3>Popular Picks</h3>
         <Splide
         options={
@@ -43,66 +44,66 @@ if (check){
           {popular.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
-                <Card>
+                <div className="Card">
                   <Link to={'/recipe/' + recipe.id}>
                   <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
-                  <Gradient/>
+                  {/* <Gradient/> */}
                   </Link>
-                </Card>
+                </div>
               </SplideSlide>
             );
           })}
         </Splide>
-      </Wrapper>
+      </div>
     </div>
   );
 }
 
-const Wrapper = styled.div`
-  margin: 4rem 0rem;
-  h3{
-    padding-bottom:2rem;
-    font-size: 1.5rem;
-  }
-`;
+// const Wrapper = styled.div`
+//   margin: 4rem 0rem;
+//   h3{
+//     padding-bottom:2rem;
+//     font-size: 1.5rem;
+//   }
+// `;
 
-const Card = styled.div`
-  min-height: 25rem;
-  border-radius: 2rem;
-  overflow: hidden;
-  position: relative;
-  img {
-    border-radius: 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    object-fit: cover;
+// const Card = styled.div`
+//   min-height: 25rem;
+//   border-radius: 2rem;
+//   overflow: hidden;
+//   position: relative;
+//   img {
+//     border-radius: 2rem;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     object-fit: cover;
 
-  }
-  p{
-    position: absolute;
-    z-index:10;
-    left:50%;
-    bottom:-50px;
-    transform: translate(-50%,0);
-    color: #000;
-    width: 100%;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 600;
-   align-items: center;
-    height: 40%;
-  }
-`;
+//   }
+//   p{
+//     position: absolute;
+//     z-index:10;
+//     left:50%;
+//     bottom:-50px;
+//     transform: translate(-50%,0);
+//     color: #000;
+//     width: 100%;
+//     text-align: center;
+//     font-size: 1rem;
+//     font-weight: 600;
+//    align-items: center;
+//     height: 40%;
+//   }
+// `;
 
-const Gradient= styled.div`
-z-index:3;
-position:absolute;
-width:100%;
-height:100%;
-background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5));
-`;
+// const Gradient= styled.div`
+// z-index:3;
+// position:absolute;
+// width:100%;
+// height:100%;
+// background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5));
+// `;
 
 export default Popular;

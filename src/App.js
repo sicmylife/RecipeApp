@@ -5,6 +5,7 @@ import Search from "./components/Search";
 import styled from "styled-components";
 import {GiKnifeFork} from 'react-icons/gi'
 import {Link} from 'react-router-dom';
+import './App.css'
 
 
 

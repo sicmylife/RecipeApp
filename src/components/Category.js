@@ -35,9 +35,11 @@ const Category = () => {
 }
 
 const List = styled.div`
+width: 330px;
 display:flex;
 justify-content:center;
-margin:2rem 2rem;`;
+align-items:center;
+margin:2rem 0;`
 
 const SLink = styled(NavLink)`
 display: flex;
@@ -45,21 +47,20 @@ flex-direction: column;
 justify-content:center;
 align-items: center;
 border-radius:50%;
-margin-right: 1rem;
 text-decoration: none;
-background:linear-gradient(35deg,#494949,#313131);
-height: 6rem;
-width: 6rem;
+background-color:#d6e4aa;
+height: 4.5rem;
+width: 4.5rem;
 cursor: pointer;
 transform: scale(0.8);
 
 h4{
-    color: white;
+    color:rgb(63, 63, 63);
     font-size: 0.8rem;
 
 }
 svg{
-    color: white;
+    color: rgb(63, 63, 63);
     font-size: 1.5rem;
 }
 &.active{

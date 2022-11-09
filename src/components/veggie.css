@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700;800&display=swap');
+@media (max-width: 767px) {
+
+  body{
+    font-family: 'Inter', sans-serif;
+
+  }
+
+  .wrap {
+    width: 400px;
+    margin: 4rem 0rem;
+  }
+
+  .wrap h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .Card {
+    width: 150px;
+    height: 200px;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    background-color: #d6e4aa;
+
+  }
+
+  .Card img {
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  .Card p {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 130px;
+    transform: translate(-50%, 0);
+    color: rgb(63, 63, 63);
+    width: 90%;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 600;
+    align-items: center;
+    height: 40%;
+  }
+}

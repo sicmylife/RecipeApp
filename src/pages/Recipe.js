@@ -43,7 +43,7 @@ const Recipe = () => {
         </Button>
         {activeTab === "instructions" && (
           <div>
-            <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
+            <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
             {/* <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3> */}
           </div>
         )}
@@ -61,24 +61,35 @@ const Recipe = () => {
 };
 
 const DetailWrapper = styled.div`
-  margin-top: 10rem;
-  margin-bottom: 5rem;
-  display: flex;
+margin: 0;
+padding: 0;
+width: 400px;
+ img{
+  width: 90%;
+ }
+ 
   .active {
     background:linear-gradient(35deg,#494949,#313131);
-
+    margin-bottom: 2rem;
     color: white;
   }
 
   h2 {
     margin-bottom: 2rem;
+    width:320px;
+    font-size: 1.3rem;
+
+  }
+  p {
+    width:320px;
   }
   li {
     font-size: 1.2rem;
     line-height: 2.5rem;
   }
   ul {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    width: 300px;
   }
 `;
 
@@ -87,13 +98,11 @@ const Button = styled.button`
   color: #313131;
   background: white;
   border: solid 2px black;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+  margin: .7rem;
   font-weight: 600;
 `;
 
 const Info = styled.div`
-  margin-left: 10rem;
   line-height: 1.6rem;
 `;
 export default Recipe;
